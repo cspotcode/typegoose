@@ -95,7 +95,7 @@ export function _buildPropMetadata(input: DecoratedPropertyMetadata) {
   }
 
   utils.initProperty(name, key, whatis);
-
+  throw new Error('test');
   if (!utils.isNullOrUndefined(rawOptions.set) || !utils.isNullOrUndefined(rawOptions.get)) {
     if (typeof rawOptions?.set !== 'function') {
       throw new TypeError(`"${name}.${key}" does not have a set function!`);
